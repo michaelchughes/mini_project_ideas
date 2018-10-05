@@ -7,18 +7,20 @@ In other words, this is a binary classification problem:
 * output is a binary 0/1
 
 Dataset:
--- 500 subjects, each either had seizures (y=1), or some other pattern (y=2,3,4 or 5)
--- Each subject's EEG 1D signal recorded for ~23 seconds at >> 100 Hz
--- Sequences then post-processed into 1 second chunks, each of length 178
+
+* 500 subjects, each either had seizures (y=1), or some other pattern (y=2,3,4 or 5)
+* Each subject's EEG 1D signal recorded for ~23 seconds at >> 100 Hz
+* Sequences then post-processed into 1 second chunks, each of length 178
 
 Use the "data.csv" file from this URL: https://archive.ics.uci.edu/ml/datasets/Epileptic+Seizure+Recognition
 
 Each row of data.csv corresponds to data for a 1 second chunk:
--- column 1 is a string that indicates the subject and the chunk
-         'X21.V1.791' means the 21-st chunk from subject "V1.791"
+* column 1 is a string that indicates the subject and the chunk
 
--- columns 2-178 are the time-series 1D observed data "x"
--- last column is the label "y" (y=1 means seizure, other values mean non-seizure)
+    'X21.V1.791' means the 21-st chunk from subject "V1.791"
+
+* columns 2-178 are the time-series 1D observed data "x"
+* last column is the label "y" (y=1 means seizure, other values mean non-seizure)
 
 Original research paper: http://users.fs.cvut.cz/ivo.bukovsky/PROJEKT/Data/Realna/BIO/EEG/reference/PRE61907.pdf
 
@@ -27,6 +29,7 @@ http://epileptologie-bonn.de/cms/front_content.php?idcat=193&lang=3&changelang=3
 
 
 High-level questions:
+
 * Can we build a reasonable classifier for this dataset?
 * What feature patterns are important for this decision
 
@@ -35,15 +38,18 @@ High-level questions:
 ## Week 1) Dataset descriptive stats
 
 Make a plots of the time-series. Compare time-series for:
+
 * "chunks" within a subject 
 * chunks from different subjects with the same label
 * chunks from different subjects who have seizures vs. not
 
 High-level goal:
+
 * Can you tell the two classes apart? 
 * Educated guess: What performance is possible? Perfect classifier?
 
 Make plots of the label frequencies:
+
 * Does each subject have only one label? Or do we have seizure and non-seizure data from the same subject?
 
 ## Week 2) Train some baseline classifiers
