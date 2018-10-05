@@ -66,7 +66,13 @@ Next, compute a feature representation of the time-series. Use just simple descr
 
 Train two classifiers: LogisticRegression and ExtraTrees (use sklearn or similar). 
 
-Show confusion matrices on training, validation, and test.
+Possibly useful (maybe overkill): Script for basic tuning of classifier hyperparameters given train/valid/test splits saved on disk:
+https://github.com/dtak/prediction-constrained-topic-models/blob/master/pc_toolbox/binary_classifiers/train_and_eval_sklearn_binary_classifier.py
+
+Deliverables:
+
+* Show confusion matrices on training, validation, and test.
+* Punchline: What is possible here? Is this classification task even feasible?
 
 ## Future
 
